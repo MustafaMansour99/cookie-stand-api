@@ -26,7 +26,7 @@ class CookieStandUpdateView(LoginRequiredMixin, UpdateView):
 class CookieStandCreateView(LoginRequiredMixin, CreateView):
     template_name = "cookie_stands/cookie_stands_create.html"
     model = CookieStand
-    fields =  ["name","raiting","reviewer"]
+    fields =  ["name","raiting","reviewer","description","hourly_sales","minimum_customers_per_hour","maximum_customers_per_hour","average_cookies_per_sale"]
     success_url = reverse_lazy("cookie_stand_list")
 
 
